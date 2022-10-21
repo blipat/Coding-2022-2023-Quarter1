@@ -1,8 +1,7 @@
 import java.util.*;
 import java.awt.*;
+public class CustomTurtleRunner {
 
-public class CustomTurtleRunner
-{
   public static void main(String[] args)
   {
       World world1 = new World(400,400);
@@ -11,21 +10,23 @@ public class CustomTurtleRunner
       // 150x200 CustomTurtle with a green body (Color.green)
       // and a blue shell (Color.blue) at position (150,300).
       // Move it forward to see it.
-      CustomTurtle turtle1 = new CustomTurtle(world1);
+      CustomTurtle turtle1 = new CustomTurtle(150,300,world1,Color.green,Color.blue,150,200);
       turtle1.forward();
 
 
       // 2. Create a small 25x50 CustomTurtle with a red body
       // and a yellow shell at position (350,200)
       // Move it forward to see it.
-
+      CustomTurtle turtle2 = new CustomTurtle(25,50,world1,Color.red,Color.yellow,350,200);
+      turtle2.forward();
 
       // 3. Create a CustomTurtle of your own design
+      CustomTurtle turtle3 = new CustomTurtle(45,100,world1,Color.green,Color.black,50,100);
+      turtle3.forward();
 
       world1.show(true);
   }
 }
-
 class CustomTurtle extends Turtle
 {
    private int x;
