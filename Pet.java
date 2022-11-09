@@ -30,5 +30,5 @@ public class Pet
 
    // Write 2 constructors and accessor (get) methods. Use good commenting.
 
-   // Don't forget to complete the main method in the PetTesterClass below!
+   // Don't forget to complete the main method in the PetTesterClass!
 }
