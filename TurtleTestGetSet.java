@@ -9,8 +9,8 @@ public class TurtleTestGetSet
       World world = new World(300,300);
       Turtle yertle = new Turtle(world);
       System.out.println("Yertle's width is: " + yertle.getWidth());
-      yertle.setWidth(200);
-      yertle.setHeight(200);
+      yertle.setWidth(2030);
+      yertle.setHeight(2040);
       System.out.println("Yertle's width is: " + yertle.getWidth());
       yertle.turnRight();
       world.show(true);
