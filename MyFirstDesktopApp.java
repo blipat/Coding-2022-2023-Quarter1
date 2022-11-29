@@ -9,6 +9,7 @@ public class MyFirstDesktopApp {
     frame.setSize(500, 500);
     frame.setLayout(null);
 
+    
     // create a Button and a Label
     JButton helloButton = new JButton("Click Me!");
     JLabel outputLabel = new JLabel();
@@ -31,6 +32,7 @@ public class MyFirstDesktopApp {
       }    });
     
     // make the frame visible
+    
     frame.setVisible(true);
   }
 }
