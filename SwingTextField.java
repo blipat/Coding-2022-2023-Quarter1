@@ -6,41 +6,52 @@ public class SwingTextField {
   public static void main(String[] args) {
     // A JFrame is a window where we can design our UI
     JFrame frame = new JFrame("My app");
-    frame.setSize(500, 500);
+    frame.setSize(900, 600);
     frame.setLayout(null);
 
     // create a Labels, Button, and TextField
-    JLabel inputLabel = new JLabel();
-    JButton submitButton = new JButton("submit"); //edit this
+    JLabel goalLabel = new JLabel();
+    JTextField goalField = new JTextField(15);
+    JLabel actualLabel = new JLabel();
+    JTextField actualField = new JTextField(15);
+    JButton inputButton = new JButton("submit");
     JLabel outputLabel = new JLabel();
-    JTextField  testField = new JTextField(15);
 
     // place and size for components
-    inputLabel.setBounds(100,50,300,50);
-    inputLabel.setFont(new Font("Arial", Font.PLAIN, 18)); //edit this
-    inputLabel.setForeground(Color.BLACK); //edit this 
-    inputLabel.setText(" Type your name below:"); //edit this
+    goalLabel.setBounds(100,50,300,50);
+    goalLabel.setFont(new Font("Arial", Font.PLAIN, 12)); //edit this
+    goalLabel.setForeground(Color.BLACK); //edit this 
+    goalLabel.setText("Type your goal amount below then press 'enter':"); //edit this
 
-    testField.setBounds(100, 100, 150, 50);
+    goalField.setBounds(100, 100, 150, 50);
 
-    submitButton.setBounds(100, 150, 150, 50);
+    actualLabel.setBounds(500,50,300,50);
+    actualLabel.setFont(new Font("Arial", Font.PLAIN, 12)); //edit this
+    actualLabel.setForeground(Color.BLACK); //edit this 
+    actualLabel.setText("Type your actual amount below then press 'enter':"); //edit this
 
-    outputLabel.setBounds(100,200,300,50);
+    actualField.setBounds(500, 100, 150, 50);
+
+    inputButton.setBounds(150, 200, 400, 50);
+
+    outputLabel.setBounds(100,400,450,50);
     outputLabel.setFont(new Font("Arial", Font.PLAIN, 18)); //edit this
     outputLabel.setForeground(Color.RED); //edit this
     
     // add components to JFrame f
-    frame.add(inputLabel);
-    frame.add(testField);
-    frame.add(submitButton);
+    frame.add(goalLabel);
+    frame.add(goalField);
+    frame.add(actualLabel);
+    frame.add(actualField);
+    frame.add(inputButton);
     frame.add(outputLabel);
     
-    // add event listener for button click
-    submitButton.addActionListener(new ActionListener() {
+    inputButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
-        String userInput = testField.getText();
-        outputLabel.setText(" Hello, " + userInput); //edit this
-        // add code here
+        double goalAmount = Double.parseDouble(goalField.getText());
+        double actualAmount = Double.parseDouble(actualField.getText());
+        // ADD CODE HERE
+        
       }    });
 
     // make the frame visible
